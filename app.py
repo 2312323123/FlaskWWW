@@ -9,6 +9,10 @@ def hello():
     return render_template('index.html', utc_dt=datetime.datetime.utcnow())
 
 
+@app.route('/hehe/')
+def hehe():
+    return render_template('hehe.html')
+
 @app.route('/about/')
 def about():
     return render_template('about.html')

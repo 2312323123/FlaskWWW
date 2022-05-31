@@ -2,4 +2,166 @@
 
 {% block content %}
     <h1>to gdzie sie sale widzi</h1>
+
+    <h1>tenteges co go nie ma jeszcze</h1>
+    
+    <h3>rezerwuj</h3>
+    
+<div class ="container">  
+    <div class ="row">  
+        <div class ='col-sm-12 my-auto'>  
+           <div class ="form-group">  
+             <p>Godzina początkowa</p><br>
+              <div class = 'input-group date' id='timepicker2'>  
+                 <input type = 'text' class="form-control" />  
+                 <span class = "input-group-addon">  
+                 <span class = "glyphicon glyphicon-time"></span>  
+                 </span>  
+              </div>  
+           </div>  
+        </div>  
+        <div class ='col-sm-12 my-auto'>  
+           <div class ="form-group">  
+             <p>Godzina końcowa</p><br>
+              <div class = 'input-group date' id='timepicker'>  
+                 <input type = 'text' class="form-control" />  
+                 <span class = "input-group-addon">  
+                 <span class = "glyphicon glyphicon-time"></span>  
+                 </span>  
+              </div>  
+           </div>  
+        </div>  
+       
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>  
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+        <script type = "text/javascript">  
+            $(function () {  
+                $('#timepicker').datetimepicker({  
+                    format: 'LT'  
+                });  
+            });   
+            $(function () {  
+                $('#timepicker2').datetimepicker({  
+                    format: 'LT'  
+                });  
+            });  
+        </script>  
+    </div>  
+
+    <h2>istniejace rezerwacje:</h2>
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                  alt=""
+                  style="width: 45px; height: 45px"
+                  class="rounded-circle"
+                />
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">John Doe</p>
+                  <p class="text-muted mb-0">john.doe@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                  alt=""
+                  style="width: 45px; height: 45px"
+                  class="rounded-circle"
+                />
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">Alex Ray</p>
+                  <p class="text-muted mb-0">alex.ray@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                  alt=""
+                  style="width: 45px; height: 45px"
+                  class="rounded-circle"
+                />
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">Kate Hunington</p>
+                  <p class="text-muted mb-0">kate.hunington@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://mdbootstrap.com/img/new/avatars/9.jpg"
+                  alt=""
+                  style="width: 45px; height: 45px"
+                  class="rounded-circle"
+                />
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">Soraya Letto</p>
+                  <p class="text-muted mb-0">soraya.letto@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://mdbootstrap.com/img/new/avatars/11.jpg"
+                  alt=""
+                  style="width: 45px; height: 45px"
+                  class="rounded-circle"
+                />
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">Zeynep Dudley</p>
+                  <p class="text-muted mb-0">zeynep.dudley@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://mdbootstrap.com/img/new/avatars/15.jpg"
+                  alt=""
+                  style="width: 45px; height: 45px"
+                  class="rounded-circle"
+                />
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">Ayat Black</p>
+                  <p class="text-muted mb-0">ayat.black@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ </div> 
 {% endblock %}
