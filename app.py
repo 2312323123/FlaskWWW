@@ -260,7 +260,7 @@ def mapa():
     date = datetime.today()
     date_after_month = datetime.today() + relativedelta(months=1)
 
-    return render_template('/tak/input.html', markers=markers, lat=request.form.get('lat'), lon=request.form.get('lon'), date=date.strftime("%Y-%m-%d"), date_after_month=date_after_month.strftime("%Y-%m-%d"))
+    return render_template('/mapa.html', markers=markers, lat=request.form.get('lat'), lon=request.form.get('lon'), date=date.strftime("%Y-%m-%d"), date_after_month=date_after_month.strftime("%Y-%m-%d"))
     # else:
     #     # Render the input form
     #     return render_template('/tak/input.html')
