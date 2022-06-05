@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block links %}
+  <!--Our CSS-->
+  <link rel="stylesheet" href="static/style.css">
+  <!--LeafletJS files-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+{% endblock %}
+
+{% block content %}
+<div>
+  {% include 'choosing_date.html' %}
+  
+  {#% if request.method == "POST" %#}
+  <!-- <div>[{{lat}}, {{lon}}]</div> -->
+  <div id="map" style="height: 80vh;"></div>
+
+  <script>
+      var map = L.map('map').setView([50.054161097435944, 19.935435577161144], 17);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors'}).addTo(map);
+
+      {{markers|safe}}
+  </script>
+  {#% endif %#}
+</div>
+{% endblock %}

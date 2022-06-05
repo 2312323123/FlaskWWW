@@ -1,1 +1,8 @@
 python -m flask run 
+
+
+pip install python-dateutil --upgrade
+pip install Pillow
+
+nazwy obrazków:
+<lp_budynku>_<pietro>[.jpg|.png]

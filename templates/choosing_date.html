@@ -1,0 +1,64 @@
+
+    <h3>szukana godzina:</h3>
+    
+    <form class ="row" id="time_form" action="{{ request.path }}" method="post">
+        <div class ='col-sm-4 my-auto'>
+          <div class ="form-group">
+            <label>Data</label><br>
+            <input type="date" id="start" name="date"
+               value="{{ date }}"
+               min="{{ date }}" max="{{ date_after_month }}"
+               class="form-control" >
+          </div>
+        </div>
+        <div class ='col-sm-4 my-auto'>
+           <div class ="form-group">
+             <label>Godzina początkowa</label><br>
+              <div class = 'input-group date' id='timepicker2'>
+                 <input name="hour_start" type ='text' class="form-control" />
+                 <span class = "input-group-addon">
+                 <span class = "glyphicon glyphicon-time"></span>
+                 </span>
+              </div>
+           </div>
+        </div>
+        <div class ='col-sm-4 my-auto'>
+           <div class ="form-group">
+             <label>Godzina końcowa</label><br>
+              <div class = 'input-group date' id='timepicker'>
+                 <input name="hour_end" type = 'text' class="form-control" />
+                 <span class = "input-group-addon">
+                 <span class = "glyphicon glyphicon-time"></span>
+                 </span>
+              </div>
+           </div>
+        </div>
+       
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>  
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+        <script type = "text/javascript">  
+            $(function () {  
+                $('#timepicker').datetimepicker({  
+                    format: 'LT'  
+                });  
+            });   
+            $(function () {  
+                $('#timepicker2').datetimepicker({  
+                    format: 'LT'  
+                });  
+            });  
+        </script>
+      <div class="w-100">
+        <input type="submit" style="float:right;" class="btn btn-secondary" onClick="godzina_submit()" value="Zatwierdź">
+      </div>
+      <hr>
+    </form>    
+
+    {#% TODO if wybrano datę, godzinę to wtedy pokaż rzeczy %#}
+    {% if isTimeSet %}
+      <h2>wybrana data: XD</h2>
+      <h2>wybrana godzina: XD-XD</h2>
+    {% endif %}

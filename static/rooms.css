@@ -1,0 +1,46 @@
+.known-reserved {
+  fill: #c1272d88;
+}
+#target g.tooltip-container:hover .known-reserved,
+#target g.tooltip-container:active .known-reserved {
+  fill: #81070d88;
+  cursor: pointer;
+}
+
+.known-free {
+  fill: #00800088;
+}
+#target g.tooltip-container:hover .known-free,
+#target g.tooltip-container:active .known-free {
+  fill: #00500088;
+  cursor: pointer;
+}
+
+.unknown {
+  fill: #8808;
+}
+#target g.tooltip-container:hover .unknown,
+#target g.tooltip-container:active .unknown {
+  fill: #00f8;
+  cursor: pointer;
+}
+
+/** tooltip */
+.tooltip-container .tooltip-tak {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  transform: translate(100px, 100px);
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip-container:hover .tooltip-tak {
+  visibility: visible;
+}

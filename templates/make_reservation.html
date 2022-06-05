@@ -1,0 +1,25 @@
+
+  {#% TODO if wybrano date i wybrano niebieski pokoj to daj guzik do rezerwacji %#}
+  {% if isTimeSet and room_active %}
+
+  <div class="row">
+    <button style="float:right;" class="btn btn-primary">Rezerwuj</button>
+  </div>
+
+  {% endif %}
+  {#% TODO jesli klikniety pokoj jest czerwonyto wypisac ze jest zajety, bo to zle troche --> if room_class == 'known-reserved', chyba tu ponizej lepiej zrobilem %#}
+    <!-- <h2>Pokój zajęty w podanym czasie</h2> -->
+  {#% endif %#}
+
+
+  {% if isTimeSet %}
+    {% if chosen_room.isFree %}
+      <h3>make_reservation.html chosen room id: {{ chosen_room_id }} is free</h3>
+      <div class="row">
+        <button style="float:right;" class="btn btn-primary">Rezerwuj</button>
+      </div>
+    {% else %}
+      <h3>make_reservation.html chosen room id: {{ chosen_room_id }} isn't free</h3>
+      <h4>please choose other time or room to make reservation</h4>
+    {% endif %}
+  {% endif %}
