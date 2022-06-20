@@ -1,5 +1,5 @@
 import datetime
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, flash
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
@@ -236,10 +236,13 @@ class RegistrationForm(Form):
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm(request.form)
-    if request.method == 'POST' and form.validate():
-        user = User(form.username.data, form.email.data,
-                    form.password.data)
-        db_session.add(user)
-        flash('Thanks for registering')
-        return redirect(url_for('login'))
-    return render_template('register.html', form=form)
+    #if request.method == 'POST' and form.validate():
+     #   user = User(form.username.data, form.email.data,
+      #              form.password.data)
+      #  db_session.add(user)
+       # flash('Thanks for registering')
+        #return redirect(url_for('login'))
+    #return render_template('register.html', form=form)
+if __name__=='__main__':
+    app.debug=True
+    app.run(host='0.0.0.0', port=5000)
